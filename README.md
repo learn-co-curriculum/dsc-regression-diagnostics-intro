@@ -24,4 +24,4 @@ While polynomial regression can improve the accuracy of your models, they also e
 
 ## Summary
 
-It's time to start modeling non-linear relationships between the predictor and target variables. 
+It's time to start learning about extensions to linear models, modeling non-linear relationships between the predictor and target variables! 
