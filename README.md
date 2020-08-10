@@ -2,6 +2,7 @@
 # Extension to Linear Models - Introduction
 
 ## Introduction
+
 In this section, you'll learn about some ways to make linear models more complex to account for complicated relationships in a dataset. Before diving in too deep, here is a roadmap for what you will be covering in this section.
 
 ##  Extensions to linear models
@@ -16,7 +17,7 @@ We'll start by introducing the concept of interactions - where two or more varia
 
 ### Polynomial regression
 
-You'll then implement higher-order equations for solving regressions. A linear expression can be described by an equation in the form of $y = mx + b$. A polynomial expression brings in higher powers of x (squared, cubed, etc). By allowing for equations containing higher-order terms you may be able to better fit a curve to your dataset, thus predicting future values more accurately.
+You'll then implement higher-order equations for solving regressions. A linear expression can be described by an equation in the form of  <img src="https://render.githubusercontent.com/render/math?math=y = mx %2b b"> . A polynomial expression brings in higher powers of x (squared, cubed, etc). By allowing for equations containing higher-order terms you may be able to better fit a curve to your dataset, thus predicting future values more accurately.
 
 ### Bias-variance tradeoff
 
