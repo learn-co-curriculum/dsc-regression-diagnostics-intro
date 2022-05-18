@@ -1,27 +1,40 @@
-
-# Extension to Linear Models - Introduction
+# Regression Diagnostics - Introduction
 
 ## Introduction
-In this section, you'll learn about some ways to make linear models more complex to account for complicated relationships in a dataset. Before diving in too deep, here is a roadmap for what you will be covering in this section.
 
-##  Extensions to linear models
+In addition to model evaluation and coefficient interpretation, regression diagnostics will allow you to level up your modeling abilities. This means applying techniques to "diagnose" why a model is underperforming, then "treat" the problem using an appropriate technique.
 
-Unfortunately, not every continuous variable can be predicted effectively using a straight line (a linear model). Imagine the relationship between your 5k time as a runner and how many hours a week you train. At the very least the improvements in your time are going to trail off with additional training (going from 0 -> 10 hrs training a week is going to have way more impact than going from 60 -> 70 hrs). And the chances are that at some point in time, you'll overtrain and additional training will actually degrade your performance. You could certainly model the relationship between weekly training hours and 5k time with a straight line, but for some values of weekly training time, the accuracy of the prediction would probably be extremely low.
+## Model Transformations
 
-In this section, you'll be introduced to a number of concepts to help you to make predictions when there is no linear relationship between the predictor and target variables.
+These techniques are the "treatments" for problems with your model. First we'll go over the different types of transformations, how to apply them, and how they impact the modeling results.
 
-### Interactions
+### Linear Transformations
 
-We'll start by introducing the concept of interactions - where two or more variables interact in a non-additive manner thus affecting a third variable. Then you'll look at why they are important and how to account for them.
+Linear transformations include ***scaling*** a variable to change its units, ***shifting*** a variable to change its mean, and ***normalization*** and ***standardization*** which combine both scaling and shifting.
 
-### Polynomial regression
+These transformations change the distributions of the variables and therefore also the interpretation of the coefficients, but are still part of a regular linear regression process.
 
-You'll then implement higher-order equations for solving regressions. A linear expression can be described by an equation in the form of $y = mx + b$. A polynomial expression brings in higher powers of x (squared, cubed, etc). By allowing for equations containing higher-order terms you may be able to better fit a curve to your dataset, thus predicting future values more accurately.
+### Extensions to Linear Models
 
-### Bias-variance tradeoff
+Unfortunately, not every continuous variable can be predicted effectively using a straight line (a linear model). The goal of these kinds of transformations is to transform the variables in a non-linear way so that the relationship between the transformed variables is linear.
 
-While polynomial regression can improve the accuracy of your models, they also exacerbate the risk of overfitting the data, making your model extremely accurate for the training set but completely inaccurate for any future data points the model wasn't trained on. You'll also look at the concept of bias-variance tradeoff and how it relates to underfitting and overfitting datasets.
+Extensions to linear models include ***log transformations***, ***interaction terms*** (for when two or more variables interact in a non-additive manner), and ***polynomial regression*** (bringing in higher powers of variables -- squared, cubed, etc.).
+
+## Linear Regression Assumptions
+
+Most often the reason that you will need to apply one of the transformations described above is that you have "diagnosed" a model as violating one of the assumptions of linear regression.
+
+We'll use the acronym ***LINE*** to describe these assumptions. This is also a helpful device for memorizing the assumptions, since this question sometimes comes up in technical interviews!
+
+The assumptions of linear regression are:
+
+#### L: Linearity
+#### I: Independence
+#### N: Normality
+#### E: Equal Variance (Homoscedasticity)
+
+For each assumption we'll go over what it means, how to assess whether the assumption is being met (using graphs as well as statistical tests), and how to apply transformations to address assumption violations.
 
 ## Summary
 
-It's time to start learning about extensions to linear models, modeling non-linear relationships between the predictor and target variables! 
+It's time to start learning some more advanced regression techniques!
